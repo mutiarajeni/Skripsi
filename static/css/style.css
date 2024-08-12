@@ -1,339 +1,358 @@
+:root {
+  --color: #86ade8;
+  --bg: #010101;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-footer {
-    padding: 20px;
-    background: #f8f9fa;
-}
-
+/* NAVBAR */
 .navbar {
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+  margin-right: auto;
+}
+
+.navbar .navbar-logo span {
+  color: var(--color);
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 0.5rem; /* Jarak antara menu */
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.navbar .navbar-nav a:hover,
+.navbar .navbar-nav .active {
+  color: var(--color);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--color);
+  transform: scaleX(0);
+}
+
+.navbar .navbar-nav a:hover::after,
+.navbar .navbar-nav .active::after {
+  transform: scaleX(0.5);
+  transition: 0.2s linear;
+}
+
+/* Elemen ekstra di sisi kanan (icon)*/
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--color);
+  margin: 0 0.5rem;
+}
+
+#user-icon {
+  font-size: 30px;
+}
+
+#hamburger-menu {
+  display: none;
+  font-size: 30px;
+}
+
+/* Responsif: Tampilkan hamburger menu di layar kecil */
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: block;
+  }
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 250px;
-    background-color: #f8f9fa;
-    padding: 15px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 15px;
 }
 
-.container {
-    margin-left: 270px; /* Adjusted for sidebar width */
-    padding: 20px;
+/*BERANDA*/
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
 }
 
-
-
-
-
-/*BERANDA
-/* Hero Section */
-.hero-section {
-    background: url('../img/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
-    position: relative;
+.row.my-5.align-items-center img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+.gallery-section img {
+  height: 200px;
+  object-fit: cover;
 }
 
-.hero-section .container {
-    position: relative;
-    z-index: 1;
+.catalog-section .card-img-top {
+  height: 200px;
+  object-fit: cover;
 }
 
-.hero-section h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+.testimonial-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.hero-section p.lead {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+.testimonial-item p {
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.hero-section .btn-primary {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
 }
-
-.hero-section .btn-primary:hover {
-    background-color: #0056b3;
-}
-
-/* Features Section */
-.features-section {
-    padding: 60px 0;
-}
-
-.feature-box {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.feature-box h3 {
-    margin-top: 20px;
-    font-size: 1.5rem;
-}
-
-.feature-box p {
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-.feature-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Testimonials Section */
-.testimonial-section {
-    padding: 60px 0;
-}
-
-.testimonial-box {
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    max-width: 500px;
-}
-
-.testimonial-text {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.testimonial-author {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-
-
-
 
 /* Katalog Page */
 .katalog-page {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .katalog-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .katalog-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .katalog-item .card-body {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .katalog-item h3 {
-    margin-top: 10px;
-    font-size: 1.75rem;
+  margin-top: 10px;
+  font-size: 1.75rem;
 }
 
 .katalog-item p {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 .katalog-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .katalog-item .btn-primary {
-    margin-top: 15px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+  margin-top: 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
 .katalog-item .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Kategori Page */
 .kategori-page {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .kategori-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .kategori-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 .kategori-card .card-body {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .kategori-card h3 {
-    margin-top: 10px;
-    font-size: 1.75rem;
+  margin-top: 10px;
+  font-size: 1.75rem;
 }
 
 .kategori-card p {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 .kategori-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .kategori-card .btn-primary {
-    margin-top: 15px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+  margin-top: 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
 .kategori-card .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Paket Page */
 .paket-page {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .paket-item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .paket-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
 .paket-item .card-body {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .paket-item h3 {
-    margin-top: 10px;
-    font-size: 1.75rem;
+  margin-top: 10px;
+  font-size: 1.75rem;
 }
 
 .paket-item p {
-    font-size: 1rem;
-    color: #666;
+  font-size: 1rem;
+  color: #666;
 }
 
 .paket-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .paket-item .btn-primary {
-    margin-top: 15px;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+  margin-top: 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
 .paket-item .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Detail Paket Page */
 .detail-paket-page {
-    padding: 60px 0;
+  padding: 60px 0;
 }
 
 .detail-paket-header {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .detail-paket-header h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .detail-paket-header p {
-    font-size: 1.25rem;
-    color: #666;
+  font-size: 1.25rem;
+  color: #666;
 }
 
 .detail-paket-content {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .detail-paket-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .detail-paket-content h2 {
-    margin-top: 20px;
-    font-size: 2rem;
+  margin-top: 20px;
+  font-size: 2rem;
 }
 
 .detail-paket-content p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    color: #333;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
 }
 
 .detail-paket-content .btn-primary {
-    margin-top: 20px;
-    border-radius: 25px;
+  margin-top: 20px;
+  border-radius: 25px;
 }

@@ -1,5 +1,57 @@
 <footer class="bg-light text-center text-lg-start">
-    <div class="container p-4">
-        <p>&copy; 2024 Oval Photo. All rights reserved.</p>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <div class="d-flex align-items-center">
+          <img
+            src="{{ url_for('static', filename='img/logo.jpg') }}"
+            alt="Logo"
+            style="width: 40px; height: 40px; margin-right: 10px"
+          />
+          <h5 class="text-uppercase">Oval Photo</h5>
+        </div>
+        <p>
+          Deskripsi perusahaan. Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry.
+        </p>
+      </div>
+
+      <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Main Menu</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="/">Beranda</a></li>
+          <li><a href="/galeri">Galeri</a></li>
+          <li><a href="/katalog">Katalog</a></li>
+          <li><a href="/tentang-kami">Tentang Kami</a></li>
+          <li><a href="/kontak" class="text-dark">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Layanan Kami</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="text-dark">Engagement</a></li>
+          <li><a href="#" class="text-dark">Prewedding</a></li>
+          <li><a href="#" class="text-dark">Wedding</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Kontak</h5>
+        <ul class="list-unstyled mb-0">
+          <li><a href="#" class="text-dark">Alamat Provinsi</a></li>
+          <li>
+            <a href="mailto:info@ovalphoto.com" class="text-dark">Email</a>
+          </li>
+          <li>
+            <a href="tel:+62000000000" class="text-dark">Nomor Telepon</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
+
+  <div class="text-center p-3 bg-dark text-white">
+    <p>&copy; 2024 Oval Photo. All rights reserved.</p>
+  </div>
 </footer>
