@@ -1,0 +1,17 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Kelola Galeri | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Kelola Galeri</h1>
+<a href="/admin/tambah-galeri" class="btn btn-primary mb-3">Tambah Foto</a>
+<div class="row">
+    <div class="col-md-3">
+        <img src="{{ url_for('static', filename='img/galeri1.jpg') }}" class="img-fluid mb-4" alt="Galeri 1">
+        <a href="/admin/hapus-galeri/1" class="btn btn-danger btn-sm">Hapus</a>
+    </div>
+    <!-- Tambah gambar galeri lainnya -->
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Kelola Paket | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Kelola Paket</h1>
+<a href="/admin/tambah-paket" class="btn btn-primary mb-3">Tambah Paket</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nama Paket</th>
+            <th>Harga</th>
+            <th>Deskripsi</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Paket Gold</td>
+            <td>Rp 3.000.000</td>
+            <td>Deskripsi paket Gold.</td>
+            <td>
+                <a href="/admin/edit-paket/1" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/admin/hapus-paket/1" class="btn btn-danger btn-sm">Hapus</a>
+            </td>
+        </tr>
+        <!-- Tambah baris paket lainnya -->
+    </tbody>
+</table>
+{% endblock %}

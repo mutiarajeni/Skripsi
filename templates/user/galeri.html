@@ -1,0 +1,15 @@
+{% extends "user/base_user.html" %}
+
+{% block title %}
+Galeri Foto | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Galeri Foto</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='img/sample1.jpg') }}" class="img-fluid mb-4" alt="Foto 1">
+        </div>
+        <!-- Tambah foto lainnya -->
+    </div>
+{% endblock %}

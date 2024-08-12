@@ -1,0 +1,33 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Kelola User | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Kelola User</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID User</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Peran</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>001</td>
+            <td>Jane Smith</td>
+            <td>jane@example.com</td>
+            <td>Admin</td>
+            <td>
+                <a href="/admin/edit-user/001" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/admin/hapus-user/001" class="btn btn-danger btn-sm">Hapus</a>
+            </td>
+        </tr>
+        <!-- Tambah baris user lainnya -->
+    </tbody>
+</table>
+{% endblock %}

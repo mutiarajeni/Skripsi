@@ -1,0 +1,339 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+.container {
+    margin-left: 270px; /* Adjusted for sidebar width */
+    padding: 20px;
+}
+
+
+
+
+
+/*BERANDA
+/* Hero Section */
+.hero-section {
+    background: url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p.lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Features Section */
+.features-section {
+    padding: 60px 0;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.feature-box h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonial-section {
+    padding: 60px 0;
+}
+
+.testimonial-box {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    max-width: 500px;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+
+
+
+
+/* Katalog Page */
+.katalog-page {
+    padding: 60px 0;
+}
+
+.katalog-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.katalog-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.katalog-item .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.katalog-item h3 {
+    margin-top: 10px;
+    font-size: 1.75rem;
+}
+
+.katalog-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.katalog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.katalog-item .btn-primary {
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.katalog-item .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Kategori Page */
+.kategori-page {
+    padding: 60px 0;
+}
+
+.kategori-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.kategori-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.kategori-card .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.kategori-card h3 {
+    margin-top: 10px;
+    font-size: 1.75rem;
+}
+
+.kategori-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.kategori-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.kategori-card .btn-primary {
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.kategori-card .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Paket Page */
+.paket-page {
+    padding: 60px 0;
+}
+
+.paket-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.paket-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.paket-item .card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.paket-item h3 {
+    margin-top: 10px;
+    font-size: 1.75rem;
+}
+
+.paket-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.paket-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.paket-item .btn-primary {
+    margin-top: 15px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.paket-item .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Detail Paket Page */
+.detail-paket-page {
+    padding: 60px 0;
+}
+
+.detail-paket-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.detail-paket-header h1 {
+    font-size: 2.5rem;
+}
+
+.detail-paket-header p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.detail-paket-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-paket-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.detail-paket-content h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.detail-paket-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.detail-paket-content .btn-primary {
+    margin-top: 20px;
+    border-radius: 25px;
+}

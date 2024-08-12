@@ -1,0 +1,18 @@
+{% extends 'user/base_user.html' %}
+{% block content %}
+<!-- Detail Paket Section -->
+<div class="detail-paket-page">
+    <div class="container">
+        <div class="detail-paket-header">
+            <h1>{{ paket.nama }}</h1>
+            <p>{{ paket.deskripsi }}</p>
+        </div>
+        <div class="detail-paket-content">
+            <img src="{{ url_for('static', filename='img/paket-detail.jpg') }}" alt="{{ paket.nama }}">
+            <h2>Detail Paket</h2>
+            <p>{{ paket.detail }}</p>
+            <a href="{{ url_for('booking', paket_id=paket.id) }}" class="btn btn-primary">Booking Sekarang</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

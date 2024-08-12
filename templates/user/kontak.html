@@ -1,0 +1,26 @@
+{% extends "user/base_user.html" %}
+
+{% block title %}
+Kontak Kami | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Kontak Kami</h1>
+<p>Hubungi kami melalui formulir di bawah ini.</p>
+<form>
+    <!-- Form kontak -->
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+        <label for="pesan" class="form-label">Pesan</label>
+        <textarea class="form-control" id="pesan" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Kirim</button>
+</form>
+{% endblock %}

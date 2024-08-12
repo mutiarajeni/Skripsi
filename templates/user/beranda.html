@@ -1,0 +1,83 @@
+{% extends 'user/base_user.html' %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container">
+        <h1 class="display-4">Selamat Datang di Oval Photo</h1>
+        <p class="lead">Temukan layanan fotografi terbaik yang sesuai dengan kebutuhan Anda.</p>
+        <a href="{{ url_for('katalog') }}" class="btn btn-primary btn-lg">Lihat Katalog</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <img src="{{ url_for('static', filename='img/feature1.jpg') }}" class="img-fluid" alt="Feature 1">
+                    <h3>Paket Fotografi Terbaik</h3>
+                    <p>Kami menawarkan berbagai paket fotografi yang sesuai dengan kebutuhan Anda.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <img src="{{ url_for('static', filename='img/feature2.jpg') }}" class="img-fluid" alt="Feature 2">
+                    <h3>Galeri Inspiratif</h3>
+                    <p>Jelajahi galeri kami untuk mendapatkan inspirasi dan melihat hasil karya terbaik kami.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <img src="{{ url_for('static', filename='img/feature3.jpg') }}" class="img-fluid" alt="Feature 3">
+                    <h3>Booking Mudah</h3>
+                    <p>Proses booking yang cepat dan mudah, sehingga Anda bisa fokus pada momen penting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="testimonial-section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Apa Kata Mereka</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-box">
+                            <p class="testimonial-text">"Pengalaman luar biasa! Fotografer sangat profesional dan hasilnya menakjubkan."</p>
+                            <p class="testimonial-author">- Maria A.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-box">
+                            <p class="testimonial-text">"Layanan yang cepat dan memuaskan. Sangat direkomendasikan untuk acara spesial."</p>
+                            <p class="testimonial-author">- John D.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="testimonial-box">
+                            <p class="testimonial-text">"Hasil foto melebihi ekspektasi kami. Terima kasih Oval Photo!"</p>
+                            <p class="testimonial-author">- Lisa S.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Sebelumnya</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Selanjutnya</span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

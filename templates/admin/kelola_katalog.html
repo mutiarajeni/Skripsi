@@ -1,0 +1,32 @@
+{% extends "admin/base_admin.html" %}
+
+{% block title %}
+Kelola Katalog | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Kelola Katalog</h1>
+<a href="/admin/tambah-katalog" class="btn btn-primary mb-3">Tambah Katalog</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Gambar</th>
+            <th>Nama Katalog</th>
+            <th>Deskripsi</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="{{ url_for('static', filename='img/katalog1.jpg') }}" class="img-thumbnail" alt="Katalog 1"></td>
+            <td>Katalog 1</td>
+            <td>Deskripsi katalog 1.</td>
+            <td>
+                <a href="/admin/edit-katalog/1" class="btn btn-warning btn-sm">Edit</a>
+                <a href="/admin/hapus-katalog/1" class="btn btn-danger btn-sm">Hapus</a>
+            </td>
+        </tr>
+        <!-- Tambah baris katalog lainnya -->
+    </tbody>
+</table>
+{% endblock %}

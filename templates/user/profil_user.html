@@ -1,0 +1,21 @@
+{% extends "user/base_user.html" %}
+
+{% block title %}
+Profil Pengguna | Oval Photo
+{% endblock %}
+
+{% block content %}
+<h1>Profil Pengguna</h1>
+<form>
+    <!-- Form profil pengguna -->
+    <div class="mb-3">
+        <label for="nama" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="nama" value="Jane Doe" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" value="jane.doe@example.com" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+</form>
+{% endblock %}

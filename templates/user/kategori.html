@@ -1,0 +1,44 @@
+{% extends 'user/base_user.html' %}
+{% block content %}
+<!-- Kategori Section -->
+<div class="kategori-page">
+    <div class="container">
+        <h2 class="text-center mb-4">Kategori</h2>
+        <div class="row">
+            <!-- Kategori Item 1 -->
+            <div class="col-md-4">
+                <div class="kategori-card">
+                    <img src="{{ url_for('static', filename='img/kategori1.jpg') }}" alt="Kategori 1">
+                    <div class="card-body">
+                        <h3>Kategori 1</h3>
+                        <p>Deskripsi singkat mengenai kategori 1.</p>
+                        <a href="{{ url_for('paket', kategori_id=1) }}" class="btn btn-primary">Lihat Paket</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Kategori Item 2 -->
+            <div class="col-md-4">
+                <div class="kategori-card">
+                    <img src="{{ url_for('static', filename='img/kategori2.jpg') }}" alt="Kategori 2">
+                    <div class="card-body">
+                        <h3>Kategori 2</h3>
+                        <p>Deskripsi singkat mengenai kategori 2.</p>
+                        <a href="{{ url_for('paket', kategori_id=2) }}" class="btn btn-primary">Lihat Paket</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Kategori Item 3 -->
+            <div class="col-md-4">
+                <div class="kategori-card">
+                    <img src="{{ url_for('static', filename='img/kategori3.jpg') }}" alt="Kategori 3">
+                    <div class="card-body">
+                        <h3>Kategori 3</h3>
+                        <p>Deskripsi singkat mengenai kategori 3.</p>
+                        <a href="{{ url_for('paket', kategori_id=3) }}" class="btn btn-primary">Lihat Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
