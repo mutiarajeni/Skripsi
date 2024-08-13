@@ -1,44 +1,9 @@
-{% extends 'user/base_user.html' %}
-{% block content %}
-<!-- Katalog Section -->
-<div class="katalog-page">
-    <div class="container">
-        <h2 class="text-center mb-4">Katalog</h2>
-        <div class="row">
-            <!-- Katalog Item 1 -->
-            <div class="col-md-4">
-                <div class="katalog-item">
-                    <img src="{{ url_for('static', filename='img/katalog1.jpg') }}" alt="Katalog 1">
-                    <div class="card-body">
-                        <h3>Katalog 1</h3>
-                        <p>Deskripsi singkat mengenai katalog 1.</p>
-                        <a href="{{ url_for('kategori', kategori_id=1) }}" class="btn btn-primary">Lihat Kategori</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Katalog Item 2 -->
-            <div class="col-md-4">
-                <div class="katalog-item">
-                    <img src="{{ url_for('static', filename='img/katalog2.jpg') }}" alt="Katalog 2">
-                    <div class="card-body">
-                        <h3>Katalog 2</h3>
-                        <p>Deskripsi singkat mengenai katalog 2.</p>
-                        <a href="{{ url_for('kategori', kategori_id=2) }}" class="btn btn-primary">Lihat Kategori</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Katalog Item 3 -->
-            <div class="col-md-4">
-                <div class="katalog-item">
-                    <img src="{{ url_for('static', filename='img/katalog3.jpg') }}" alt="Katalog 3">
-                    <div class="card-body">
-                        <h3>Katalog 3</h3>
-                        <p>Deskripsi singkat mengenai katalog 3.</p>
-                        <a href="{{ url_for('kategori', kategori_id=3) }}" class="btn btn-primary">Lihat Kategori</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% extends "user/base_user.html" %}{% block content %}
+<!-- Header -->
+<header class="header">
+  <div class="header-content text-center">
+    <h1>KATALOG OVAL PHOTO</h1>
+    <p>Beautiful moments created by your presence</p>
+  </div>
+</header>
 {% endblock %}
