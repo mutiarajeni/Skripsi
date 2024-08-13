@@ -161,6 +161,34 @@ body {
   }
 }
 
+/* FOOTER */
+footer .social-icon {
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+footer .social-icon:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+footer h5 {
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  margin-bottom: 0.7rem;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
