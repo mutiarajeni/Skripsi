@@ -1,6 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, request, render_template, redirect, url_for, session, flash, jsonify
 from pymongo import MongoClient
-from bson import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
+from datetime import datetime, timedelta
+import time
+from bson.objectid import ObjectId
+import random
+import string
+import os
 
 # Koneksi ke database MongoDB
 connection_string = "mongodb+srv://test:sparta@cluster0.9kunvma.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -71,37 +78,53 @@ def user_register():
     return render_template('user/register.html')
 
 # Route untuk halaman admin
-@app.route('/admin/dashboard')
+@app.route('/admin_dashboard')
 def admin_dashboard():
     return render_template('admin/dashboard.html')
 
-@app.route('/admin/kelola-katalog')
-def kelola_katalog():
-    return render_template('admin/kelola_katalog.html')
+@app.route('/admin_layananFotografi')
+def admin_layananFotogafi():
+    return render_template('admin/layananFotografi.html')
 
-@app.route('/admin/kelola-paket')
-def kelola_paket():
-    return render_template('admin/kelola_paket.html')
+@app.route('/admin_paketFotografi')
+def admin_paketFotografi():
+    return render_template('admin/paketFotografi.html')
 
-@app.route('/admin/kelola-pesanan')
-def kelola_pesanan():
-    return render_template('admin/kelola_pesanan.html')
+@app.route('/admin_galeri')
+def admin_galeri():
+    return render_template('admin/galeri.html')
 
-@app.route('/admin/kelola-jadwal')
-def kelola_jadwal():
-    return render_template('admin/kelola_jadwal.html')
+@app.route('/admin_lokasi')
+def admin_lokasi():
+    return render_template('admin/lokasi.html')
 
-@app.route('/admin/kelola-galeri')
-def kelola_galeri():
-    return render_template('admin/kelola_galeri.html')
+@app.route('/admin_jadwal')
+def admin_jadwal():
+    return render_template('admin/Jadwal.html')
 
-@app.route('/admin/kelola-user')
-def kelola_user():
-    return render_template('admin/kelola_user.html')
+@app.route('/admin_pesanan')
+def admin_pesanan():
+    return render_template('admin/Pesanan.html')
 
-@app.route('/admin/login')
+@app.route('/admin_timFotografi')
+def admin_timFotografi():
+    return render_template('admin/timFotografi.html')
+@app.route('/admin_faq')
+def admin_faq():
+    return render_template('admin/faq.html')
+
+@app.route('/admin_akunKlien')
+def admin_akunKlien():
+    return render_template('admin/akunKlien.html')
+
+@app.route('/admin_login')
 def admin_login():
     return render_template('admin/login_admin.html')
+
+@app.route('/admin_logout')
+def admin_logout():
+    session.clear()
+    return redirect(url_for('admin_login'))
 
 
 if __name__ == '__main__':

@@ -220,7 +220,6 @@ footer ul li {
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
   line-height: 1.4;
   font-weight: 400;
-  
 }
 
 /* === BERANDA === */
@@ -272,7 +271,6 @@ footer ul li {
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
   line-height: 1.4;
   font-weight: 400;
-  
 }
 
 .hero .content .cta {
@@ -330,9 +328,9 @@ footer ul li {
 .kenapa-button {
   display: inline-block;
   padding: 10px 20px;
-  border: 1.5px solid #225CB3;
+  border: 1.5px solid #225cb3;
   border-radius: 50px;
-  color: #225CB3;
+  color: #225cb3;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   margin-left: 370px;
@@ -392,9 +390,9 @@ footer ul li {
 .gallery button {
   display: inline-block;
   padding: 10px 20px;
-  border: 1.5px solid #225CB3;
+  border: 1.5px solid #225cb3;
   border-radius: 50px;
-  color: #225CB3;
+  color: #225cb3;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   margin-left: center;
@@ -404,7 +402,6 @@ footer ul li {
   background-color: #86ade8;
   color: #fff;
 }
-
 
 /* === Content Section 3 (Katalog Layanan) - Beranda === */
 .layanan {
@@ -446,13 +443,13 @@ footer ul li {
 }
 
 .layanan-card h3 {
-  color: #F3F7FD;
+  color: #f3f7fd;
   margin: 0 0 10px;
   font-weight: 600;
 }
 
 .layanan-card p {
-  color: #F3F7FD;
+  color: #f3f7fd;
   font-size: 14px;
   text-align: justify;
 }
@@ -464,9 +461,9 @@ footer ul li {
 .layanan button {
   display: inline-block;
   padding: 10px 20px;
-  border: 1.5px solid #225CB3;
+  border: 1.5px solid #225cb3;
   border-radius: 50px;
-  color: #225CB3;
+  color: #225cb3;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   margin-left: center;
@@ -518,7 +515,7 @@ footer ul li {
   position: relative;
   min-height: 100px;
   text-align: center;
-  align-items: center;   /* vertikal tengah */
+  align-items: center; /* vertikal tengah */
   justify-content: center; /* horizontal tengah */
 }
 
@@ -526,7 +523,6 @@ footer ul li {
   margin-top: 10px;
   font-size: 14px;
   margin-bottom: 10px;
-  
 }
 
 .circle {
@@ -546,7 +542,7 @@ footer ul li {
 
 /* Garis horizontal row atas */
 .row-top .step:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 70px;
   right: -30px;
@@ -557,7 +553,7 @@ footer ul li {
 
 /* Garis horizontal row bawah (rtl arah kiri) */
 .row-bottom .step:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 70px;
   left: -30px;
@@ -568,7 +564,7 @@ footer ul li {
 
 /* Garis vertikal dari 4 ke 5 */
 .step-down::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 100px;
   bottom: -80px;
@@ -677,9 +673,9 @@ footer ul li {
 .testimonial-button {
   display: inline-block;
   padding: 10px 20px;
-  border: 1.5px solid #225CB3;
+  border: 1.5px solid #225cb3;
   border-radius: 50px;
-  color: #225CB3;
+  color: #225cb3;
   text-decoration: none;
   font-size: 14px;
   transition: background-color 0.3s, color 0.3s;
@@ -692,7 +688,6 @@ footer ul li {
   background-color: #86ade8;
   color: #fff;
 }
-
 
 /* === GALERI === */
 /* Filters Section */
@@ -718,7 +713,7 @@ footer ul li {
 }
 .filters select {
   width: 100%;
-  font-size:16px;
+  font-size: 16px;
   color: #374151; /* Tailwind gray-700 */
   padding: 6px 12px;
   border: 1px solid #d1d5db; /* Tailwind gray-300 */
@@ -730,7 +725,7 @@ footer ul li {
   cursor: pointer;
 }
 .filters select:focus {
-  border-color: #3b82f6; 
+  border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
 }
 .filters select[disabled] {
@@ -751,7 +746,7 @@ footer ul li {
 }
 .description h2 {
   font-weight: 700;
-  font-size: 18px; 
+  font-size: 18px;
   margin-bottom: 16px;
   text-align: left;
 }
@@ -759,7 +754,7 @@ footer ul li {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px 16px;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 /* === KATALOG LAYANAN === */
@@ -814,9 +809,9 @@ h2 {
 
 .calendar-header .view-btn {
   background-color: #f1f7fe;
-  color: #225CB3;
+  color: #225cb3;
   padding: 0.6rem 2rem;
-  border: 1.5px solid #225CB3;
+  border: 1.5px solid #225cb3;
   border-radius: 50px;
   cursor: pointer;
   font-size: 0.9rem;
@@ -901,7 +896,7 @@ h2 {
 }
 
 /* katalog */
-.service-section{
+.service-section {
   max-width: 1000px;
   margin-left: 135px;
   text-align: center;
@@ -940,7 +935,6 @@ h2 {
   color: white;
   border-radius: 12px;
   padding: 4rem;
-  
 }
 
 .text-box h3 {
@@ -965,7 +959,7 @@ h2 {
 
 .btn-katalog {
   padding: 1rem 2rem;
-  background-color: #86ADE8;
+  background-color: #86ade8;
   color: white;
   text-decoration: none;
   border-radius: 50px;
@@ -978,7 +972,7 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  .service-section{
+  .service-section {
     flex-direction: row;
     align-items: center;
   }
@@ -992,14 +986,11 @@ h2 {
     flex-direction: row-reverse;
   }
 
-  .service-content img, .text-box {
+  .service-content img,
+  .text-box {
     flex: 1;
   }
 }
-
-
-
-
 
 /* === TENTANG KAMI === */
 .about-section {
@@ -1084,7 +1075,7 @@ h2 {
   padding-left: 135px;
 }
 
-.tulisan h2{
+.tulisan h2 {
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -1100,7 +1091,7 @@ h2 {
 }
 
 /* === Jarak Section Berwarna === */
-.jarak-section{
+.jarak-section {
   background-color: #fff;
   padding: 60px 20px;
 }
