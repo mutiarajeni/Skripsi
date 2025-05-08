@@ -5,17 +5,19 @@ Profil Pengguna | Oval Photo
 {% endblock %}
 
 {% block content %}
-<h1>Profil Pengguna</h1>
-<form>
-    <!-- Form profil pengguna -->
-    <div class="mb-3">
-        <label for="nama" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="nama" value="Jane Doe" required>
+<div class="header-profile">
+    <div class="profile-pic-wrapper">
+      <img
+        src="https://storage.googleapis.com/a1aa/image/1a04022f-3f24-4631-c626-d9df0888aefb.jpg"
+        alt="User profile icon silhouette in black on light blue circular background"
+        class="profile-pic"
+      />
     </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" value="jane.doe@example.com" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-</form>
+  </div>
+  <div class="content-profile">
+    <p class="name-profile">Serini Dewi Lestari</p>
+    <p class="username-profile">FutureBride_77</p>
+    <p class="email-profile">dewiserinilestari@gmail.com</p>
+    <button class="btn-profile" type="button">Ubah Profil</button>
+  </div>
 {% endblock %}
