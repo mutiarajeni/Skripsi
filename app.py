@@ -21,21 +21,26 @@ app = Flask(__name__)
 def beranda():
     return render_template('user/beranda.html')
 
-@app.route('/katalog')
-def katalog():
-    return render_template('user/katalog.html')
+@app.route('/katalog_layanan')
+def katalog_layanan():
+    return render_template('user/katalog_layanan.html')
 
-@app.route('/kategori')
-def kategori():
-    return render_template('user/kategori.html')
+@app.route('/jadwal')
+def jadwal():
+    return render_template('user/jadwal.html')
 
-@app.route('/paket')
-def paket():
-    return render_template('user/paket.html')
+@app.route('/engagement')
+def engagement():
+    return render_template('user/paket_engagement.html')
 
-@app.route('/detail-paket/<int:id>')
-def detail_paket(id):
-    return render_template('user/detail_paket.html', id=id)
+@app.route('/prewedding')
+def prewedding():
+    return render_template('user/paket_prewedding.html')
+
+@app.route('/wedding')
+def wedding():
+    return render_template('user/paket_wedding.html')
+
 
 @app.route('/booking')
 def booking():
@@ -69,13 +74,21 @@ def tentang_kami():
 def kontak():
     return render_template('user/kontak.html')
 
-@app.route('/login-user')
-def user_login():
+@app.route('/faqbb')
+def faq():
+    return render_template('user/faqv.html')
+
+@app.route('/masuk')
+def masuk():
     return render_template('user/login_user.html')
 
-@app.route('/register')
-def user_register():
-    return render_template('user/register.html')
+@app.route('/daftar')
+def daftar():
+    return render_template('user/daftar.html')
+
+@app.route('/lupa_kataSandi')
+def lupa_kataSandi():
+    return render_template('user/lupa_kataSandi.html')
 
 # Route untuk halaman admin
 @app.route('/admin_dashboard')
@@ -109,6 +122,7 @@ def admin_pesanan():
 @app.route('/admin_timFotografi')
 def admin_timFotografi():
     return render_template('admin/timFotografi.html')
+
 @app.route('/admin_faq')
 def admin_faq():
     return render_template('admin/faq.html')
